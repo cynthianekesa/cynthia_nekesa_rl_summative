@@ -1,0 +1,56 @@
+import os
+import sys
+from stable_baselines3 import PPO
+from environment.botanical_env import BotanicalExplorerEnv
+from environment.botanical_opengl_renderer import OpenGLRenderer  # Or your Pygame renderer
+
+def visualize_ppo_agent(model_path="ppo_models/ppo_botanical_final.zip", num_episodes=3):
+    """
+    Visualizes a trained PPO agent
+    Args:
+        model_path: Path to the trained PPO model
+        num_episodes: Number of episodes to render
+    """
+    # Load the trained model
+    model = PPO.load(model_path)
+    
+    # Create environment
+    env = BotanicalExplorerEnv(grid_size=10, num_plants=15)
+    renderer = OpenGLRenderer(env)  # Use your existing renderer
+    
+    try:
+        for episode in range(num_episodes):
+            obs, _ = env.reset()
+            done = False
+            episode_reward = 0
+            
+            while not done:
+                # Get action from PPO policy
+                action, _ = model.predict(obs, deterministic=True)
+                
+                # Execute action
+                obs, reward, terminated, truncated, _ = env.step(action)
+                done = terminated or truncated
+                episode_reward += reward
+                
+                # Render frame
+                renderer.render_frame()
+                
+                # Optional: Add small delay for better visualization
+                # pygame.time.delay(100)  # If using Pygame
+            
+            print(f"Episode {episode + 1} - Total Reward: {episode_reward:.2f}")
+        
+        # Save as GIF
+        renderer.save_gif("ppo_agent_animation.gif")
+        print("Saved animation as 'ppo_agent_animation.gif'")
+    
+    finally:
+        renderer.close()
+
+if __name__ == "__main__":
+    # Adjust these paths as needed
+    visualize_ppo_agent(
+        model_path="ppo_models/ppo_botanical_final.zip",
+        num_episodes=2  # Render 2 full episodes
+    )
