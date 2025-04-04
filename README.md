@@ -228,7 +228,7 @@ Visualization of the agent and states without training involved:
 
 ---
 
-## 6. Documentation**
+## 6. **Documentation**
 
 - **Demo video**: Folder contains simulation videos and presentation video. [https://drive.google.com/drive/folders/1awBBAhWED3L2p0Itbj3rvtyLyCoPiLii?usp=drive_link]
 - **Report**: [https://docs.google.com/document/d/1Xm_uA0weyQzq_YIOEvccIexpPZ1UVzlct73tX35SkMU/edit?usp=sharing]
@@ -247,13 +247,13 @@ PPO outperformed DQN in terms of convergence speed and stability, attributed to 
 
 ---
 
-## 9. **Contribution**
+## 8. **Contribution**
 Make a pull request before contributing.
 
 
 ---
 
-## 10. **License**
+## 9. **License**
 No licenses were installed for this project.
 
 
