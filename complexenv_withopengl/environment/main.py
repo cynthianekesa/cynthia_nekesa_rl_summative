@@ -1,3 +1,5 @@
+# Visualizing the Botanical Exploration Environment with OpenGL
+
 from botanical_env import BotanicalExplorerEnv
 from botanical_opengl_renderer import OpenGLRenderer
 import numpy as np

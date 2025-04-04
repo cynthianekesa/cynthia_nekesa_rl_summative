@@ -54,6 +54,8 @@ def visualize_model(model_path="dqn_models/dqn_botanical_final.zip", num_episode
 if __name__ == "__main__":
     visualize_model()
 
+# ALternative code
+
 import os
 import sys
 from stable_baselines3 import DQN
