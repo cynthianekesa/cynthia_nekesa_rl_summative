@@ -14,7 +14,7 @@ This project focuses on implementing and comparing two reinforcement learning (R
 ## 2. **Custom Gym Environment**
 **Scratch env**
 
-The visualization shows the agent (red), obstacles (grey), and the target (green). The agent's path is highlighted in yellow.
+The visualization shows the agent (red), obstacles (grey), and the target (green).
 
 
 ![kalo environment](https://github.com/user-attachments/assets/3ab8961c-a977-41a3-ba58-38ff08f8747e)
