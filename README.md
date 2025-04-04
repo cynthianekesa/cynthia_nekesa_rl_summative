@@ -22,6 +22,7 @@ The visualization shows the agent (red), obstacles (grey), and the target (green
 
 
 **Static File**
+
 INITIAL STATE
 
 
@@ -38,7 +39,9 @@ FINAL STATE
 
 
 **GIFS**
+
 Visualization of the agent and states without training involved:
+
 
 
 ![kalo_animation](https://github.com/user-attachments/assets/29fdbc01-c7bb-4ac3-9f43-895bbff3b19e)
