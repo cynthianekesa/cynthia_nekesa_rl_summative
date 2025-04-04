@@ -1,8 +1,8 @@
-# Botanical Explorer: A journey into the unknown to identify a rare medicinal plant
+# Botanical Explorer: A journey into the unknown to identify an indigenous rare medicinal plant
 ## 1. **Introduction: RL Embedded in Pre-Capstone Proposal**
 There has been extreme biodiversity loss taking place in `KALONU AREA` over the past 5 years.
 
-Cynthia, a botanist and student at ALU has been doing research for the past 4 months in her Pre-capstone module and realized how the loss of biodiversity has led to extreme loss of indigenous medicinal plants(native to Africa)
+Cynthia, a botanist and student at ALU has been doing research for the past 4 months in her Pre-capstone module and realized how the loss of biodiversity has led to extreme loss of indigenous medicinal plants(native to Africa).
 
 On the other hand, 1 day ago, Cynthia saw a breaking news story on her television about the rise of chronic diseases like cancer, HIV, and diabetes in KALONU AREA. She quickly remembers the indigenous knowledge she got from her late grandmother on a rare plant called 'cure' that could be the answer to all these human disasters. She is the only hope for humanity at this point in time, as she is the only one who knows where 'cure' is and its location. Let's see how RL can be applied to illustrate how Cynthia identifies this rare plant and saves humanity.
 
@@ -15,22 +15,34 @@ This project focuses on implementing and comparing two reinforcement learning (R
 **Scratch env**
 
 The visualization shows the agent (red), obstacles (grey), and the target (green). The agent's path is highlighted in yellow.
+
+
 ![kalo environment](https://github.com/user-attachments/assets/3ab8961c-a977-41a3-ba58-38ff08f8747e)
 
 
 
 **Static File**
 INITIAL STATE
+
+
 ![kalo movement](https://github.com/user-attachments/assets/2b3b4492-7239-4f89-b677-a1728ca6e4f5)
 
+
+
 FINAL STATE
+
+
 ![final state of cynthia in kalo](https://github.com/user-attachments/assets/0eb0eed8-f926-4cba-878c-0010b2ada290)
+
+
 
 
 **GIFS**
 Visualization of the agent and states without training involved:
 
+
 ![kalo_animation](https://github.com/user-attachments/assets/29fdbc01-c7bb-4ac3-9f43-895bbff3b19e)
+
 
 
 ![kalo_animation (1)](https://github.com/user-attachments/assets/c58792e8-5b7a-4072-8fd5-038d7a61ef49)
@@ -41,7 +53,9 @@ Visualization of the agent and states without training involved:
 ## 3. **DQN Training**
 
 ### Training Performance
+
 ![dqn-training-performance](https://github.com/user-attachments/assets/395925d9-6f6e-4398-9767-af3e8e3f2af9)
+
 
 **Graph 1: Cumulative Reward During Training.**
 - **X-axis**: Episodes (ranging from 0 to 10,000).
@@ -72,6 +86,7 @@ Visualization of the agent and states without training involved:
 
 
 **Graphs**
+
 ![dqn agent graphs](https://github.com/user-attachments/assets/a34100ea-8159-4fae-8db7-11023bb23e4a)
 
 
