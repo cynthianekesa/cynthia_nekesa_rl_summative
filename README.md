@@ -124,7 +124,7 @@ Visualization of the agent and states without training involved:
 - **Data Representation**: A red line represents the loss values during the training process.
 - **Observations**:
   - The loss fluctuates significantly throughout the training process, with sharp peaks and valleys.
-  - There are occasional spikes in the loss (e.g., near the end of the training), which could indicate challenges in optimizing the agent's policy or instability in the learning process.
+  - There are occasional spikes in the loss (e.g., near the end of the training), which indicate challenges in optimizing the agent's policy or instability in the learning process.
   - Despite the fluctuations, the loss appears to stabilize somewhat over time, though it does not completely smooth out.
 
 ### Agent Performance
@@ -134,7 +134,8 @@ Visualization of the agent and states without training involved:
 - Average Reward → Measures agent efficiency
 - Average Steps Taken → Lower steps = better navigation
 
-![dqn agent performace](https://github.com/user-attachments/assets/a683021b-c38e-4106-8a3c-012e6fa733ef)
+![dqn agent performance](https://github.com/user-attachments/assets/ccb5596a-6028-44e2-89a5-2e447916ef76)
+
 
 
 **Graphs**
@@ -146,12 +147,12 @@ Visualization of the agent and states without training involved:
 - **Y-axis**: Total Reward (scale ranges from approximately 8.8 to 9.8)
 - **X-axis**: Episode (ranges from 0 to about 17.5)
 - **Data**: Blue dots connected by lines showing very stable reward values
-- **Pattern**: The reward consistently stays around 9.3 throughout all episodes, with minimal variation
+- **Pattern**: The reward consistently stays around 8.4 throughout all episodes, with minimal variation
 
 **Graph 2: Steps Taken per Episode**
 
 - **Y-axis**: Steps Taken (scale ranges from approximately 7.6 to 8.4)
-- **X-axis**: Episode (ranges from 0 to about 17.5, matching the top graph)
+- **X-axis**: Episode (ranges from 0 to about 17.5)
 - **Data**: Red dots connected by lines showing very stable step counts
 - **Pattern**: The steps taken per episode remains extremely consistent at around 8.0 across all episodes
 
@@ -167,30 +168,26 @@ Visualization of the agent and states without training involved:
 
 ### Training Performance
 
-![dqn-training-performance](https://github.com/user-attachments/assets/395925d9-6f6e-4398-9767-af3e8e3f2af9)
+![ppo training performance](https://github.com/user-attachments/assets/31bc6996-b412-4129-a2df-7f7ce3a8bb60)
 
 
-![dqn-training-performance(1)](https://github.com/user-attachments/assets/765e2d6f-1bb7-4af4-8d18-bb86b6e86794)
+![ppo training performance(1)](https://github.com/user-attachments/assets/94f68c75-1d2c-44f7-b9e4-bbaa8239adab)
+
 
 
 
 **Graph 1: Cumulative Reward During Training.**
-- **X-axis**: Episodes (ranging from 0 to 10,000).
-- **Y-axis**: Cumulative Reward (ranging from 0 to 40,000).
-- **Data Representation**: A blue line represents the cumulative reward earned by the agent over the episodes.
-- **Observations**:
-  - The cumulative reward increases steadily over time, indicating that the agent is learning and improving its performance.
-  - There are noticeable plateaus (e.g., around 2,000 episodes), suggesting periods where the agent's learning progress temporarily stagnates before resuming improvement.
-  - The overall trend is upward, showing consistent learning.
+- **X-axis**: Episodes (training iterations)
+- **Y-axis**: Cumulative Reward collected by agent
+- **Observation**:
+  - The curve shows an upward trend overall, indicating that the agent is improving as it learns. 
 
 **Graph 2: Loss Curve During Training**
-- **X-axis**: Steps (ranging from 0 to 10,000).
-- **Y-axis**: Loss (ranging from 0 to 2.5).
-- **Data Representation**: A red line represents the loss values during the training process.
+- **X-axis**: Training steps
+- **Y-axis**: Loss values associated with agent's updates
 - **Observations**:
-  - The loss fluctuates significantly throughout the training process, with sharp peaks and valleys.
-  - There are occasional spikes in the loss (e.g., near the end of the training), which could indicate challenges in optimizing the agent's policy or instability in the learning process.
-  - Despite the fluctuations, the loss appears to stabilize somewhat over time, though it does not completely smooth out.
+  - The loss curve is erratic with fluctuations and occasional spikes. This is common in reinforcement learning and reflects the inherent complexity of optimizing the agent’s policy, where learning adjustments can lead to momentary instability.
+  - In summary, while the agent is learning and its cumulative reward increases over episodes, the oscillating loss indicates that the training process experiences regular fluctuations. This is typical for many deep reinforcement learning environments where the balance between exploration and exploitation creates non-linear learning dynamics.
 
 ### Agent Performance
 
@@ -199,31 +196,38 @@ Visualization of the agent and states without training involved:
 - Average Reward → Measures agent efficiency
 - Average Steps Taken → Lower steps = better navigation
 
-![dqn agent performace](https://github.com/user-attachments/assets/a683021b-c38e-4106-8a3c-012e6fa733ef)
+![ppo agent performance](https://github.com/user-attachments/assets/20dc8ff0-d550-498e-86d9-71b6ead89e2d)
+
 
 
 **Graphs**
 
-![dqn agent graphs](https://github.com/user-attachments/assets/a34100ea-8159-4fae-8db7-11023bb23e4a)
+![ppo agent graph](https://github.com/user-attachments/assets/af7bc202-c562-4464-b863-26da24202252)
+
 
 
 **Graph 1: Total Reward per Episode**
-- **Y-axis**: Total Reward (scale ranges from approximately 8.8 to 9.8)
-- **X-axis**: Episode (ranges from 0 to about 17.5)
-- **Data**: Blue dots connected by lines showing very stable reward values
-- **Pattern**: The reward consistently stays around 9.3 throughout all episodes, with minimal variation
+- **Y-axis**: Total Reward (ranges from 8.8 to 9.8)
+- **X-axis**: Episode (ranges from 0 to approximately 18)
+- **Data**: A blue line with dots representing the total reward achieved by the agent in each episode.
+- **Pattern**:
+   - The total reward remains constant at approximately 9.3 across all episodes.
+   - There is no visible variation or trend in the reward, indicating that the agent's performance is stable and consistent throughout training.
 
 **Graph 2: Steps Taken per Episode**
 
-- **Y-axis**: Steps Taken (scale ranges from approximately 7.6 to 8.4)
-- **X-axis**: Episode (ranges from 0 to about 17.5, matching the top graph)
-- **Data**: Red dots connected by lines showing very stable step counts
-- **Pattern**: The steps taken per episode remains extremely consistent at around 8.0 across all episodes
+- **Y-axis**: Steps Taken (ranges from 7.6 to 8.4)
+- **X-axis**:  Episode (ranges from 0 to approximately 18)
+- **Data**: A red line with dots representing the number of steps taken by the agent in each episode.
+- **Pattern**:
+   - The number of steps taken per episode remains constant at approximately 8.0.
+   - Similar to the reward graph, there is no visible variation or trend, indicating that the agent consistently completes its tasks.
 
 
-- **Observations**:
-  - Based on the DQN agent graphs, the agent has reached a remarkably stable performance level. Both the reward (consistently around 9.3) and steps taken (around 8.0) per episode show almost no variation across all training episodes.
-  - Since there's no visible learning curve or improvement over time, the agent appears to have found its strategy immediately and maintained it throughout training.
+- **Conclusive Observations**:
+  - **Stability**: The PPO agent has reached a stable policy early in training, as evidenced by the constant reward and step count across episodes.
+  - **Convergence**: The lack of variation suggests that the agent has converged to an optimal or near-optimal policy for the given environment.
+  - **Environment Complexity**: The simplicity and consistency of the results indicate that the environment is straightforward, with a clear optimal strategy that the agent has successfully learned.
 
 
 ---
@@ -232,6 +236,7 @@ Visualization of the agent and states without training involved:
 
 - **Demo video**: Folder contains simulation videos and presentation video. [https://drive.google.com/drive/folders/1awBBAhWED3L2p0Itbj3rvtyLyCoPiLii?usp=drive_link]
 - **Report**: [https://docs.google.com/document/d/1Xm_uA0weyQzq_YIOEvccIexpPZ1UVzlct73tX35SkMU/edit?usp=sharing]
+- **Colab Notebook**: [https://colab.research.google.com/drive/1x8FRp61JyYl6MClKq4irgt51TIvR3qsL?usp=sharing]
 
 
 ---
